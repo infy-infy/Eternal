@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.1)
+project(Eternal)
+add_library(eternal INTERFACE)
+
+file(GLOB_RECURSE HEADER_FILES src/*.h)
+
+target_sources(eternal INTERFACE HEADER_FILES)
+target_include_directories(eternal INTERFACE include/)
